@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+
+<html>
+    <style>
+        h1 {font-family: fantasy; color: rgb(206, 101, 31);text-align: center}
+        button {color: crimson; margin: 180px; ; text-align: center; }
+    </style>
+<head>
+    <title>Die rolling project</title>
+    <style>
+    h1{
+        font-style: italic;font-size: 18pt; text-align: center;
+    }
+    h2{
+        font-size: 12pt; text-align: center;
+    }
+    body{
+        text-align: left;
+        background-color: #888888;
+    }
+    .container {
+    position: relative;
+    width: 50%;
+    }
+
+    /* Make the image responsive */
+    .container img {
+    width: 10%;
+    height: auto;
+    }
+
+    /* Style the button and place it in the middle of the container/image */
+    .container .d4rollbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+
+    .container .d4rollbtn:hover {
+    background-color: black;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <h1>Choose Which Die To Roll And Get A Result</h1>
+    <div style="display: flex; justify-content: center;">
+        <img src="C:\Users\West Carter Student\Pictures\Die.png" alt="Dice" >
+    </div>
+    <br>
+    <button class="d4rollbtn" onclick="rollD4()">D4</button>
+
+    <button class="d6rollbtn" onclick="rollD6()">D6</button>
+
+    <button class="d8rollbtn" onclick="rollD8()">D8</button>
+    <br>
+    <button class="d10rollbtn" onclick="rollD10()">D10</button>
+    
+    <button class="d12rollbtn" onclick="rollD12()">D12</button>
+
+    <button class="d20rollbtn" onclick="rollD20()">D20</button>
+    <br>
+    <button class="d100rollbtn" onclick="rollD100()">D100</button>
+
+
+    <div class="container">
+        <img src="C:\Users\West Carter Student\Pictures\Die.png" alt="Snow">
+        <button class="d4rollbtn" onclick="rollD4()">D4</button>
+        
+      </div>
+
+        
+    <script language="Javascript">
+            
+        
+    var dee4 = -1;
+    var dee6 = -1;
+    var dee8 = -1;
+    var dee10 = -1;
+    var dee12 = -1;
+    var dee20 = -1;
+    var dee100 = -1;
+
+        
+    //<h1>Choose which die to roll and get a result</h1>
+
+
+    //<button class="D4">D4</button>
+    
+    
+    
+    function rollD4() {
+    
+        dee4 = getRandomInt(1,5);
+        window.alert("Your Roll Is: " + dee4);
+        dee4 = -1;
+        
+    }
+    function rollD6() {
+        dee6 = getRandomInt(1,7);
+        window.alert("Your Roll Is: " + dee6);
+        dee6 = -1;
+    }
+    function rollD8() {
+        dee8 = getRandomInt(1,9);
+        window.alert("Your Roll Is: " + dee8);
+        dee8 = -1;
+    }
+    function rollD10() {
+        dee10 = getRandomInt(1,11);
+        window.alert("Your Roll Is: " + dee10);
+        dee10 = -1;
+    }
+    function rollD12() {
+        dee12 = getRandomInt(1,13);
+        window.alert("Your Roll Is: " + dee12);
+        dee12 = -1;
+    }
+    function rollD20() {
+        dee20 = getRandomInt(1,21);
+        window.alert("Your Roll Is: " + dee20);
+        dee20 = -1;
+    }
+    function rollD100() {
+        dee100 = getRandomInt(1,101);
+        window.alert("Your Roll Is: " + dee100);
+        dee100 = -1;
+    }
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
+    //if (object.onclick = function(){D4}) {
+    //    var dee4 = Math.floor((random() * 4) + 1);
+    //}
+    
+
+    </script>
+</body>
+
+
+
+
+
+</html>
